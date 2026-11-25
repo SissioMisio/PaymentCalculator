@@ -10,7 +10,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.text.MessageFormat;
-
+// altro commento
 public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder> {
     private final Item[] localDataSet;
 
@@ -81,3 +81,4 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder
         }
     }
 }
+// commento bello
