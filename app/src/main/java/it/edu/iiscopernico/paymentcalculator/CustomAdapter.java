@@ -54,7 +54,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder
         private final Button minus;
         private final Button plus;
 
-        public ViewHolder(View view) {
+        public ViewHolder(View view) { // commento test
             super(view);
 
             name = view.findViewById(R.id.name);
