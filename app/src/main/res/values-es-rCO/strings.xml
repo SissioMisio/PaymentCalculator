@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Payment Calculator ES</string>
+    <string name="title">Title ES</string>
+    <string name="reset">Reset ES</string>
+    <string name="confirm">Confirm ES</string>
+</resources>
