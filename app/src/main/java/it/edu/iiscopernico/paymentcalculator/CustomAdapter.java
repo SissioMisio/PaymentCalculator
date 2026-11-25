@@ -10,7 +10,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.text.MessageFormat;
-// altro commento
+
 public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder> {
     private final Item[] localDataSet;
 
@@ -54,7 +54,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder
         private final Button minus;
         private final Button plus;
 
-        public ViewHolder(View view) { // commento test
+        public ViewHolder(View view) {
             super(view);
 
             name = view.findViewById(R.id.name);
@@ -81,4 +81,3 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder
         }
     }
 }
-// commento bello
