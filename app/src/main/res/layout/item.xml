@@ -8,6 +8,14 @@
     android:layout_height="wrap_content"
     android:paddingVertical="15sp">
 
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <TextView
         android:id="@+id/name"
         android:layout_width="0dp"
@@ -17,7 +25,7 @@
         android:textColor="@color/material_dynamic_neutral100"
         app:layout_constraintBottom_toTopOf="@id/amount"
         app:layout_constraintEnd_toStartOf="@+id/minus"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
         app:layout_constraintTop_toTopOf="parent"
         tools:text="Name" />
 
@@ -30,7 +38,7 @@
         android:textColor="@color/material_dynamic_neutral100"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@id/minus"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
         app:layout_constraintTop_toBottomOf="@id/name"
         tools:text="123 ml" />
 

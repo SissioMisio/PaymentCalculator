@@ -4,6 +4,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -40,6 +41,9 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder
             localDataSet[position].incrementCount();
             viewHolder.count.setText(String.valueOf(localDataSet[position].getCount()));
         });
+        viewHolder.getImageView().setImageResource(
+                localDataSet[position].getImageResId()
+        );
     }
 
     @Override
@@ -48,6 +52,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder
     }
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
+        private final ImageView imageView;
         private final TextView name;
         private final TextView amount;
         private final TextView count;
@@ -57,11 +62,16 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder
         public ViewHolder(View view) {
             super(view);
 
+            imageView = view.findViewById(R.id.imageView);
             name = view.findViewById(R.id.name);
             amount = view.findViewById(R.id.amount);
             count = view.findViewById(R.id.count);
             minus = view.findViewById(R.id.minus);
             plus = view.findViewById(R.id.plus);
+        }
+
+        public ImageView getImageView() {
+            return imageView;
         }
 
         public TextView getName() {

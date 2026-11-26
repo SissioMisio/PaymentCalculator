@@ -31,25 +31,25 @@ public class MainActivity extends AppCompatActivity {
         WindowCompat.getInsetsController(window, window.getDecorView()).setAppearanceLightNavigationBars((getBaseContext().getResources().getConfiguration().uiMode & Configuration.UI_MODE_NIGHT_MASK) == Configuration.UI_MODE_NIGHT_NO);
 
         Item[] items = new Item[]{
-                new Item("Marmelada de Flor de Jamaica", 130, "ml"),
-                new Item("Marmelada de Flor de Jamaica", 230, "ml"),
-                new Item("Chutney de mango", 130, "ml"),
-                new Item("Pasta de achiote", 30, "ml"),
-                new Item("Dulce de Orejaro", 130, "ml"),
-                new Item("Humus de Orejaro"),
-                new Item("Marmelada de Acerola", 130, "ml"),
-                new Item("Marmelada de Acerola", 230, "ml"),
-                new Item("Polvo Guaimaro", 125, "g"),
-                new Item("Polvo Guaimaro", 250, "g"),
-                new Item("Polvo Guaimaro", 500, "g"),
-                new Item("Polvo Guaimaro", 1, "Kg"),
-                new Item("Dulce de guaimaro"),
-                new Item("Flores jamaica", 50, "g"),
-                new Item("Flores jamaica", 250, "g"),
-                new Item("Flores jamaica", 500, "g"),
-                new Item("Flores jamaica", 1, "Kg"),
-                new Item("Semillas de Orejero", 1, "Kg"),
-                new Item("Chutney de Jobo")
+                new Item("Marmelada de Flor de Jamaica", 130, "ml", R.drawable.mermelada_flor_de_jamaica),
+                new Item("Marmelada de Flor de Jamaica", 230, "ml", R.drawable.mermelada_flor_de_jamaica),
+                new Item("Chutney de mango", 130, "ml", R.drawable.chutney_de_mango),
+                new Item("Pasta de achiote", 30, "ml", R.drawable.pasta_de_achiote),
+                new Item("Dulce de Orejaro", 130, "ml", R.drawable.dulce_de_orejero),
+                new Item("Humus de Orejaro", R.drawable.humus_de_orejero),
+                new Item("Marmelada de Acerola", 130, "ml", R.drawable.mermelada_de_acerola),
+                new Item("Marmelada de Acerola", 230, "ml", R.drawable.mermelada_de_acerola),
+                new Item("Polvo Guaimaro", 125, "g", R.drawable.polvo_guaimaro),
+                new Item("Polvo Guaimaro", 250, "g", R.drawable.polvo_guaimaro),
+                new Item("Polvo Guaimaro", 500, "g", R.drawable.polvo_guaimaro),
+                new Item("Polvo Guaimaro", 1, "Kg", R.drawable.polvo_guaimaro),
+                new Item("Dulce de guaimaro", R.drawable.dulce_de_guaimaro),
+                new Item("Flores jamaica", 50, "g", R.drawable.flores_jamaica),
+                new Item("Flores jamaica", 250, "g", R.drawable.flores_jamaica),
+                new Item("Flores jamaica", 500, "g", R.drawable.flores_jamaica),
+                new Item("Flores jamaica", 1, "Kg", R.drawable.flores_jamaica),
+                new Item("Semillas de Orejero", 1, "Kg", R.drawable.semillas_de_orejero),
+                new Item("Chutney de Jobo", R.drawable.chutney_de_jobo)
         };
 
         RecyclerView recyclerView = findViewById(R.id.item_list);
