@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F5F7FA"
+    android:background="@color/material_dynamic_neutral10"
     android:fillViewport="true">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -16,21 +16,23 @@
             android:id="@+id/title"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
             android:text="@string/title"
             android:textAlignment="center"
+            android:textColor="@color/material_dynamic_neutral95"
             android:textSize="22sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:text="Riepilogo Costi" />
+            tools:text="@string/title" />
 
+        <!-- CARD 1: RIEPILOGO COSTI INTERATTIVO -->
         <androidx.cardview.widget.CardView
+            android:id="@+id/cardCosti"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            app:cardBackgroundColor="#FFFFFF"
+            app:cardBackgroundColor="@color/material_dynamic_neutral20"
             app:cardCornerRadius="12dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -44,16 +46,15 @@
                 android:stretchColumns="0">
 
                 <TableRow
-                    android:background="#EEF2F6"
+                    android:background="@color/material_dynamic_neutral30"
                     android:padding="10dp">
 
                     <TextView
                         android:id="@+id/item1"
-                        android:layout_width="0dp"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="Distribucion"
-                        android:textColor="#334155"
+                        android:text="@string/item_distribucion"
+                        android:textColor="@color/material_dynamic_neutral95"
                         android:textSize="14sp"
                         android:textStyle="bold" />
 
@@ -62,93 +63,120 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="8dp"
-                        android:text="Mondo X Total Unid."
+                        android:text="@string/value_distribucion"
                         android:textAlignment="viewEnd"
+                        android:textColor="@color/material_dynamic_neutral95"
                         android:textSize="14sp"
                         android:textStyle="bold" />
                 </TableRow>
 
+                <!-- Mano De Obra -->
                 <TableRow
                     android:paddingHorizontal="8dp"
-                    android:paddingVertical="12dp">
+                    android:paddingVertical="8dp">
 
                     <TextView
                         android:id="@+id/item2"
-                        android:layout_width="0dp"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="Mano De Obra"
+                        android:layout_gravity="center_vertical"
+                        android:text="@string/item_mano_de_obra"
+                        android:textColor="@color/material_dynamic_neutral90"
                         android:textSize="15sp" />
 
-                    <TextView
+                    <EditText
                         android:id="@+id/value2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="12dp"
+                        android:background="@color/material_dynamic_neutral30"
+                        android:hint="@string/hint_zero_decimal"
+                        android:inputType="numberDecimal"
+                        android:minWidth="96dp"
+                        android:paddingHorizontal="10dp"
+                        android:paddingVertical="6dp"
                         android:textAlignment="viewEnd"
+                        android:textColor="@color/material_dynamic_neutral100"
+                        android:textColorHint="@color/material_dynamic_neutral70"
                         android:textSize="15sp"
-                        android:textStyle="bold"
-                        tools:text="$ 0.00" />
+                        android:textStyle="bold" />
                 </TableRow>
 
                 <View
                     android:layout_height="1dp"
-                    android:background="#E2E8F0" />
+                    android:background="@color/material_dynamic_neutral30" />
 
+                <!-- Costos Producto Ingredientes Frasco -->
                 <TableRow
                     android:paddingHorizontal="8dp"
-                    android:paddingVertical="12dp">
+                    android:paddingVertical="8dp">
 
                     <TextView
                         android:id="@+id/item3"
-                        android:layout_width="0dp"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="Costos Producto Ingredientes Frasco"
+                        android:layout_gravity="center_vertical"
+                        android:text="@string/item_costos_producto"
+                        android:textColor="@color/material_dynamic_neutral90"
                         android:textSize="15sp" />
 
-                    <TextView
+                    <EditText
                         android:id="@+id/value3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="12dp"
+                        android:background="@color/material_dynamic_neutral30"
+                        android:hint="@string/hint_zero_decimal"
+                        android:inputType="numberDecimal"
+                        android:minWidth="96dp"
+                        android:paddingHorizontal="10dp"
+                        android:paddingVertical="6dp"
                         android:textAlignment="viewEnd"
+                        android:textColor="@color/material_dynamic_neutral100"
+                        android:textColorHint="@color/material_dynamic_neutral70"
                         android:textSize="15sp"
-                        android:textStyle="bold"
-                        tools:text="$ 0.00" />
+                        android:textStyle="bold" />
                 </TableRow>
 
                 <View
                     android:layout_height="1dp"
-                    android:background="#E2E8F0" />
+                    android:background="@color/material_dynamic_neutral30" />
 
+                <!-- Costos Indirectos -->
                 <TableRow
                     android:paddingHorizontal="8dp"
-                    android:paddingVertical="12dp">
+                    android:paddingVertical="8dp">
 
                     <TextView
                         android:id="@+id/item4"
-                        android:layout_width="0dp"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="Costos Indirectos"
+                        android:layout_gravity="center_vertical"
+                        android:text="@string/item_costos_indirectos"
+                        android:textColor="@color/material_dynamic_neutral90"
                         android:textSize="15sp" />
 
-                    <TextView
+                    <EditText
                         android:id="@+id/value4"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="12dp"
+                        android:background="@color/material_dynamic_neutral30"
+                        android:hint="@string/hint_zero_decimal"
+                        android:inputType="numberDecimal"
+                        android:minWidth="96dp"
+                        android:paddingHorizontal="10dp"
+                        android:paddingVertical="6dp"
                         android:textAlignment="viewEnd"
-                        android:textColor="#0F172A"
+                        android:textColor="@color/material_dynamic_neutral100"
+                        android:textColorHint="@color/material_dynamic_neutral70"
                         android:textSize="15sp"
-                        android:textStyle="bold"
-                        tools:text="$ 0.00" />
+                        android:textStyle="bold" />
                 </TableRow>
 
                 <View
                     android:layout_height="1dp"
-                    android:background="#E2E8F0" />
+                    android:background="@color/material_dynamic_neutral30" />
 
                 <TableRow
                     android:paddingHorizontal="8dp"
@@ -156,10 +184,10 @@
 
                     <TextView
                         android:id="@+id/item5"
-                        android:layout_width="0dp"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="5% Manejo Administrativo"
+                        android:text="@string/item_manejo_administrativo"
+                        android:textColor="@color/material_dynamic_neutral90"
                         android:textSize="15sp" />
 
                     <TextView
@@ -167,42 +195,52 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="12dp"
+                        android:text="@string/default_currency_zero"
                         android:textAlignment="viewEnd"
+                        android:textColor="@color/material_dynamic_neutral100"
                         android:textSize="15sp"
-                        android:textStyle="bold"
-                        tools:text="$ 0.00" />
+                        android:textStyle="bold" />
                 </TableRow>
 
                 <View
                     android:layout_height="1dp"
-                    android:background="#E2E8F0" />
+                    android:background="@color/material_dynamic_neutral30" />
 
+                <!-- Ganancias + Logistica Local -->
                 <TableRow
                     android:paddingHorizontal="8dp"
-                    android:paddingVertical="12dp">
+                    android:paddingVertical="8dp">
 
                     <TextView
                         android:id="@+id/item6"
-                        android:layout_width="0dp"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:textSize="15sp"
-                        tools:text="GANANCIAS + LOGISTICA LOCAL" />
+                        android:layout_gravity="center_vertical"
+                        android:text="@string/item_ganancias_logistica"
+                        android:textColor="@color/material_dynamic_neutral90"
+                        android:textSize="15sp" />
 
-                    <TextView
+                    <EditText
                         android:id="@+id/value6"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="12dp"
+                        android:background="@color/material_dynamic_neutral30"
+                        android:hint="@string/hint_zero_decimal"
+                        android:inputType="numberDecimal"
+                        android:minWidth="96dp"
+                        android:paddingHorizontal="10dp"
+                        android:paddingVertical="6dp"
                         android:textAlignment="viewEnd"
+                        android:textColor="@color/material_dynamic_neutral100"
+                        android:textColorHint="@color/material_dynamic_neutral70"
                         android:textSize="15sp"
-                        android:textStyle="bold"
-                        tools:text="$ 0.00" />
+                        android:textStyle="bold" />
                 </TableRow>
 
                 <View
                     android:layout_height="1dp"
-                    android:background="#E2E8F0" />
+                    android:background="@color/material_dynamic_neutral30" />
 
                 <TableRow
                     android:paddingHorizontal="8dp"
@@ -210,53 +248,63 @@
 
                     <TextView
                         android:id="@+id/item7"
-                        android:layout_width="0dp"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:textSize="15sp"
-                        tools:text="TOTAL COSTO + GANANCIA" />
+                        android:text="@string/item_total_costo_ganancia"
+                        android:textColor="@color/material_dynamic_neutral90"
+                        android:textSize="15sp" />
 
                     <TextView
                         android:id="@+id/value7"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="12dp"
+                        android:text="@string/default_currency_zero"
                         android:textAlignment="viewEnd"
+                        android:textColor="@color/material_dynamic_neutral100"
                         android:textSize="15sp"
-                        android:textStyle="bold"
-                        tools:text="$ 0.00" />
+                        android:textStyle="bold" />
                 </TableRow>
 
                 <View
                     android:layout_height="1dp"
-                    android:background="#E2E8F0" />
+                    android:background="@color/material_dynamic_neutral30" />
 
+                <!-- Total + Comision -->
                 <TableRow
                     android:paddingHorizontal="8dp"
-                    android:paddingVertical="12dp">
+                    android:paddingVertical="8dp">
 
                     <TextView
                         android:id="@+id/item8"
-                        android:layout_width="0dp"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:textSize="15sp"
-                        tools:text="TOTAL + COMISION" />
+                        android:layout_gravity="center_vertical"
+                        android:text="@string/item_total_comision"
+                        android:textColor="@color/material_dynamic_neutral90"
+                        android:textSize="15sp" />
 
-                    <TextView
+                    <EditText
                         android:id="@+id/value8"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="12dp"
+                        android:background="@color/material_dynamic_neutral30"
+                        android:hint="@string/hint_zero_decimal"
+                        android:inputType="numberDecimal"
+                        android:minWidth="96dp"
+                        android:paddingHorizontal="10dp"
+                        android:paddingVertical="6dp"
                         android:textAlignment="viewEnd"
+                        android:textColor="@color/material_dynamic_neutral100"
+                        android:textColorHint="@color/material_dynamic_neutral70"
                         android:textSize="15sp"
-                        android:textStyle="bold"
-                        tools:text="$ 0.00" />
+                        android:textStyle="bold" />
                 </TableRow>
 
                 <View
                     android:layout_height="1dp"
-                    android:background="#E2E8F0" />
+                    android:background="@color/material_dynamic_neutral30" />
 
                 <TableRow
                     android:paddingHorizontal="8dp"
@@ -264,26 +312,27 @@
 
                     <TextView
                         android:id="@+id/item9"
-                        android:layout_width="0dp"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:textSize="15sp"
-                        tools:text="10% DE VENTAS LOCALES AL DETAL" />
+                        android:text="@string/item_ventas_detal"
+                        android:textColor="@color/material_dynamic_neutral90"
+                        android:textSize="15sp" />
 
                     <TextView
                         android:id="@+id/value9"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="12dp"
+                        android:text="@string/default_currency_zero"
                         android:textAlignment="viewEnd"
+                        android:textColor="@color/material_dynamic_neutral100"
                         android:textSize="15sp"
-                        android:textStyle="bold"
-                        tools:text="$ 0.00" />
+                        android:textStyle="bold" />
                 </TableRow>
 
                 <View
                     android:layout_height="1dp"
-                    android:background="#E2E8F0" />
+                    android:background="@color/material_dynamic_neutral30" />
 
                 <TableRow
                     android:paddingHorizontal="8dp"
@@ -291,33 +340,35 @@
 
                     <TextView
                         android:id="@+id/item10"
-                        android:layout_width="0dp"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:textSize="15sp"
-                        tools:text="TOTAL + COMISION + AL DETAL" />
+                        android:text="@string/item_total_comision_detal"
+                        android:textColor="@color/material_dynamic_neutral90"
+                        android:textSize="15sp" />
 
                     <TextView
                         android:id="@+id/value10"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="12dp"
+                        android:text="@string/default_currency_zero"
                         android:textAlignment="viewEnd"
+                        android:textColor="@color/material_dynamic_neutral100"
                         android:textSize="15sp"
-                        android:textStyle="bold"
-                        tools:text="$ 0.00" />
+                        android:textStyle="bold" />
                 </TableRow>
 
                 <TableRow
                     android:layout_marginTop="8dp"
+                    android:background="@color/material_dynamic_neutral30"
                     android:padding="12dp">
 
                     <TextView
                         android:id="@+id/itemTotal"
-                        android:layout_width="0dp"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="TOTAL"
+                        android:text="@string/item_total"
+                        android:textColor="@color/material_dynamic_neutral100"
                         android:textSize="16sp"
                         android:textStyle="bold" />
 
@@ -326,14 +377,262 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="12dp"
+                        android:text="@string/default_currency_zero"
                         android:textAlignment="viewEnd"
-                        android:textColor="#0369A1"
+                        android:textColor="@color/material_dynamic_neutral100"
                         android:textSize="16sp"
-                        android:textStyle="bold"
-                        tools:text="$ 0.00" />
+                        android:textStyle="bold" />
                 </TableRow>
 
             </TableLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- CARD 2: DIVISIONE GUADAGNI -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardDivisioneGuadagni"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:cardBackgroundColor="@color/material_dynamic_neutral20"
+            app:cardCornerRadius="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cardCosti">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/titoloDivisione"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/material_dynamic_neutral30"
+                    android:padding="10dp"
+                    android:text="@string/titolo_divisione_guadagni"
+                    android:textColor="@color/material_dynamic_neutral95"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <!-- Guadagno totale da dividere -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/label_guadagno_da_dividere"
+                        android:textColor="@color/material_dynamic_neutral90"
+                        android:textSize="15sp" />
+
+                    <EditText
+                        android:id="@+id/inputGuadagnoTotale"
+                        android:layout_width="110dp"
+                        android:layout_height="wrap_content"
+                        android:background="@color/material_dynamic_neutral30"
+                        android:hint="@string/hint_zero_decimal"
+                        android:inputType="numberDecimal"
+                        android:paddingHorizontal="10dp"
+                        android:paddingVertical="6dp"
+                        android:textAlignment="viewEnd"
+                        android:textColor="@color/material_dynamic_neutral100"
+                        android:textColorHint="@color/material_dynamic_neutral70"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <!-- Numero persone per divisione equa -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/label_numero_persone"
+                        android:textColor="@color/material_dynamic_neutral90"
+                        android:textSize="15sp" />
+
+                    <EditText
+                        android:id="@+id/inputNumeroPersone"
+                        android:layout_width="110dp"
+                        android:layout_height="wrap_content"
+                        android:background="@color/material_dynamic_neutral30"
+                        android:hint="@string/hint_default_people"
+                        android:inputType="number"
+                        android:paddingHorizontal="10dp"
+                        android:paddingVertical="6dp"
+                        android:textAlignment="viewEnd"
+                        android:textColor="@color/material_dynamic_neutral100"
+                        android:textColorHint="@color/material_dynamic_neutral70"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginVertical="12dp"
+                    android:background="@color/material_dynamic_neutral30" />
+
+                <!-- Quota a persona (calcolata) -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/label_quota_a_persona"
+                        android:textColor="@color/material_dynamic_neutral100"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/risultatoQuotaPersona"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/default_currency_zero"
+                        android:textColor="@color/material_dynamic_neutral100"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginVertical="12dp"
+                    android:background="@color/material_dynamic_neutral30" />
+
+                <!-- Divisione personalizzata per percentuale -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_dividi_percentuale"
+                    android:textColor="@color/material_dynamic_neutral80"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/nomeSocio1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@color/material_dynamic_neutral30"
+                        android:hint="@string/hint_persona_1"
+                        android:inputType="textCapWords"
+                        android:paddingHorizontal="8dp"
+                        android:paddingVertical="6dp"
+                        android:textColor="@color/material_dynamic_neutral100"
+                        android:textColorHint="@color/material_dynamic_neutral70"
+                        android:textSize="14sp" />
+
+                    <EditText
+                        android:id="@+id/percentualeSocio1"
+                        android:layout_width="72dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:background="@color/material_dynamic_neutral30"
+                        android:hint="@string/hint_default_percent"
+                        android:inputType="numberDecimal"
+                        android:paddingHorizontal="8dp"
+                        android:paddingVertical="6dp"
+                        android:textAlignment="viewEnd"
+                        android:textColor="@color/material_dynamic_neutral100"
+                        android:textColorHint="@color/material_dynamic_neutral70"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/importoSocio1"
+                        android:layout_width="88dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:text="@string/default_currency_zero"
+                        android:textAlignment="viewEnd"
+                        android:textColor="@color/material_dynamic_neutral100"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/nomeSocio2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@color/material_dynamic_neutral30"
+                        android:hint="@string/hint_persona_2"
+                        android:inputType="textCapWords"
+                        android:paddingHorizontal="8dp"
+                        android:paddingVertical="6dp"
+                        android:textColor="@color/material_dynamic_neutral100"
+                        android:textColorHint="@color/material_dynamic_neutral70"
+                        android:textSize="14sp" />
+
+                    <EditText
+                        android:id="@+id/percentualeSocio2"
+                        android:layout_width="72dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:background="@color/material_dynamic_neutral30"
+                        android:hint="@string/hint_default_percent"
+                        android:inputType="numberDecimal"
+                        android:paddingHorizontal="8dp"
+                        android:paddingVertical="6dp"
+                        android:textAlignment="viewEnd"
+                        android:textColor="@color/material_dynamic_neutral100"
+                        android:textColorHint="@color/material_dynamic_neutral70"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/importoSocio2"
+                        android:layout_width="88dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:text="@string/default_currency_zero"
+                        android:textAlignment="viewEnd"
+                        android:textColor="@color/material_dynamic_neutral100"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btnCalcolaDivisione"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:backgroundTint="@color/material_dynamic_neutral40"
+                    android:text="@string/btn_calcola_divisione"
+                    android:textColor="@color/material_dynamic_neutral100" />
+
+            </LinearLayout>
         </androidx.cardview.widget.CardView>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
